@@ -1,0 +1,36 @@
+-- 1
+-- What are the column names?
+SELECT * 
+FROM orders
+LIMIT 10;
+
+-- 2 
+-- How recent is this data?
+SELECT DISTINCT order_date 
+FROM orders;
+
+-- 3
+-- Instead of selecting all the columns using *, 
+-- write a query that selects only the special_instructions column.
+SELECT special_instructions
+
+FROM orders
+WHERE special_instructions LIKE '%box%'
+ORDER BY special_instructions;
+-- Limit the result to 20 rows.
+SELECT id,
+   special_instructions
+FROM orders
+WHERE special_instructions LIKE '%box%';
+
+SELECT id AS '#',
+   special_instructions AS 'Notes'
+FROM orders
+WHERE special_instructions LIKE '%box%';
+
+
+
+
+
+
+
